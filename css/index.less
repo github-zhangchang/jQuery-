@@ -1,10 +1,14 @@
 
 #app{
   .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 70px;
     background: #fff;
     border-bottom: 1px solid #e5e5e5;
+    z-index: 999;
     .header{
       width:1200px;
       height: 65px;
@@ -16,28 +20,48 @@
         }
       }
       .header-right{
-
         ul{
           float: right;
-
           li{
             float: left;
             line-height: 65px;
             a{
               font-size: 16px;
-              color: #000;
               font-weight: bold;
               padding: 10px 15px;
+              color: #000;
+              &.shanghu:hover{
+                color: #fff;
+                background: #e94840;
+              }
+              &.shanghu{
+                background: #e94840;
+                border-radius: 5px;
+                color: #fff;
+                padding: 4px 6px;
+              }
+              &.off:hover{
+                color:#000
+              }
+              &:hover{
+                color:#f00;
+                background-color: #fff;
+                transition: color .5s;
+              }
               img{
                 vertical-align: middle;
+                margin-bottom: 3px;
+                margin-right: -4px;
               }
               span{
                 font-size: 16px;
-                color: #000;
                 font-weight: bold;
               }
               .city{
                 margin-right: 20px;
+                &:hover{
+                  color:#f00;
+                }
               }
             }
           }
@@ -74,7 +98,11 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: #f00;
+            margin: 4px;
+            background: rgba(0,0,0,0.2);
+            &.on{
+              background: rgba(255,255,255,1);
+            }
           }
         }
       }
@@ -94,6 +122,9 @@
           padding-left: 45px;
           height: 42px;
           line-height: 42px;
+          &:hover{
+            background: #60646d;
+          }
           a{
             font-weight: bold;
             color:#fff;
@@ -111,14 +142,24 @@
             }
           }
           ul{
+            display: none;
             position: absolute;
             left: 180px;
-            top: -42px;
+            top: 0;
             height: 420px;
             background: #fff;
+            &.on{
+              display: block;
+            }
             li{
+              &:hover{
+                background: #fff;
+              }
               a{
                 color: #000;
+                &:hover{
+                  color:#e94840;
+                }
               }
             }
           }
@@ -129,16 +170,16 @@
 
   .box{
     width: 100%;
+    overflow: hidden;
     padding-bottom: 20px;
-    margin-top: 30px;
-    box-sizing: border-box;
-    .item{
+    .fff{
       width: 1200px;
       margin: 0 auto;
-      padding: 50px 0 0;
       .top{
-        //width: 1200px;
+          text-align: center;
+          margin-top: 50px;
         p{
+          margin-top: 50px;
           text-align: center;
           font-size: 28px;
           font-weight: bold;
@@ -150,6 +191,10 @@
           font-size: 22px;
           margin-top: 15px;
           font-family: '幼圆';
+          a:hover{
+            color:#fb474f;
+            transition: color .5s;
+          }
         }
       }
       .bottom{
@@ -163,6 +208,10 @@
               font-size: 18px;
               color: #898989;
               font-family: "幼圆";
+              &:hover{
+                color:#fb474f;
+                transition: color .5s;
+              }
             }
           }
         }
@@ -174,11 +223,15 @@
             overflow: hidden;
             position: relative;
             .bot{
+              background: #fff;
               border: 1px solid #eaeaea;
               float: left;
               width: 210px;
               margin: 0 4px;
               padding: 10px;
+              &:hover{
+                box-shadow: 5px 5px 15px #ccc;
+              }
               img{
                 width: 210px;
                 height: 210px;
@@ -231,7 +284,8 @@
 
   .baozhang{
     text-align: center;
-    padding-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 10px;
     background: #fff;
     color: #333;
     h2{
@@ -252,6 +306,7 @@
   }
 
   .servi{
+    background: #fff;
     padding-top: 20px;
     height: 66px;
     ul{
@@ -269,6 +324,9 @@
   }
 
   .footer{
+    background: #fff;
+    width: 100%;
+    height: 120px;
     clear: both;
     padding-top: 50px;
     dl{
@@ -284,12 +342,15 @@
         margin-left: 30px;
         width: 1090px;
         line-height: 30px;
-        margin-top: -6px;
         a{
-          width: 8%;
+          width: 8.6%;
           font-size: 16px;
           display: inline-block;
           text-align: center;
+          &:hover{
+            color:#f00;
+            transition: color .5s;
+          }
         }
       }
     }
@@ -297,9 +358,12 @@
 
   .beian{
     clear: both;
-    height: 150px;
     text-align: center;
     padding-top: 50px;
+    p{
+      color: #898989;
+      font-size: 14px;
+    }
     .htit{
       width: 1200px;
       margin: 0 auto;
@@ -307,12 +371,24 @@
       font-size: 18px;
       color: #1d1515;
       font-weight: bold;
+      position: relative;
+      bottom: 20px;
     }
     .hezuo{
       width: 1200px;
       margin: 0 auto;
+      overflow: hidden;
       li{
-
+        float: left;
+        width: 11%;
+        height: 60px;
+        text-align: center;
+        img{
+          width: 100px;
+        }
+      }
+      &.first{
+        margin-left:0;
       }
     }
   }

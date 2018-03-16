@@ -1,0 +1,9 @@
+{
+  "name": "daoway",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "~4.15.5",
+    "mongoose": "^5.0.10"
+  }
+}
