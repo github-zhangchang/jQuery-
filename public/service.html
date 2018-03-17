@@ -25,9 +25,9 @@
                 <span class="city">切换城市</span>
               </a>
             </li>
-            <li><a href="javascripts:;" style="color: red">首页</a></li>
+            <li><a href="http://localhost:3000/index.html" style="color: red">首页</a></li>
             <li><a href="javascripts:;">到位APP</a></li>
-            <li><a href="javascripts:;">服务商</a></li>
+            <li><a href="http://localhost:3000/service.html">服务商</a></li>
             <li><a href="javascripts:;">商家入驻</a></li>
             <li><a href="javascripts:;">风物APP</a></li>
             <li><a href="javascripts:;">关于我们</a></li>
@@ -42,9 +42,7 @@
       <div class="center-left">
         <!--列表项-->
         <div class="tab-div">
-          <ul id="daoway">
-
-          </ul>
+          <ul id="daoway"></ul>
         </div>
 
         <!--获取更多按钮-->
@@ -143,6 +141,7 @@
 </script>
 <script>
   $(function () {
+
     $.get('/getServiceList', function (data) {
       $('#daoway').append(template('temp2', {data: data}));
     })
@@ -153,5 +152,11 @@
       })
     })
   })
+
+  window.onload = function () {
+    $('#daoway>li').click(function () {
+      window.location.href = 'service-item.html'
+    })
+  }
 </script>
 </html>

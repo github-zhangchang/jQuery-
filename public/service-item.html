@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./stylesheets/common.css">
+  <link rel="stylesheet" href="./stylesheets/serverItem.css">
+  <script src="./javascripts/template-web.js"></script>
+</head>
+<body>
+<div id="header">
+  <div class="wrapper">
+    <div class="container">
+      <div class="navbar-left">
+        <a href="javascript:;">
+          <img src="./images/main/logo.png">
+        </a>
+      </div>
+      <div class="navbar-right">
+        <ul class="nav">
+          <li class="position">
+            <a href="/position">
+              <img src="./images/main/citypoint.png">
+              <span class="showCity">北京</span>
+              <span class="city">切换城市</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="http://localhost:3000/index.html">首页</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="change">到位APP</a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/service.html" class="change">服务商</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="change">商家入驻</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="change">风物APP</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="change">关于我们</a>
+          </li>
+          <li class="shanghu">
+            <a href="javascript:;" class="shanghu-right">商家登录</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="service-item">
+  <div class="htit">
+    <div class="htit-center"></div>
+  </div>
+  <div class="navtit">
+    <ul class="items">
+      <li>服务项目</li>
+
+      <li>商家简介</li>
+
+      <li>用户评论</li>
+    </ul>
+  </div>
+  <div class="nav">
+    <div class="nav-center">
+      <div class="service-link fuwu">
+        <h3 ><i>服务项目</i></h3>
+        <div class="link-item" id="fw"></div>
+      </div>
+      <div class="service-link shop">
+        <h3><i>商家简介</i></h3>
+        <div class="link-item" id="sj"></div>
+      </div>
+      <div class="service-link users">
+        <h3>
+          <i>用户评论</i><em>（10300条评论）</em>
+        </h3>
+        <div class="conments">
+          <!--评论列表-->
+          <div id="pl"></div>
+
+          <div class="pages">
+            <a href="javascripts:;" class="up nopage" onclick="pageUpOrDown('up')">上一页</a>
+            <div class="showpage">
+              <a href="javascripts:;" class="num act">1</a>
+              <a href="javascripts:;" class="num">2</a>
+              <a href="javascripts:;" class="num">3</a>
+              <a href="javascripts:;" class="num">4</a>
+              <a href="javascripts:;" class="num">5</a>
+              <a href="javascripts:;" class="num">6</a>
+              <a href="javascripts:;" class="num">7</a>
+              <a href="javascripts:;" class="num">8</a>
+              <a href="javascripts:;" class="num">9</a>
+              ...
+            </div>
+            <a href="javascripts:;" class="down" onclick="pageUpOrDown('down')">下一页></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aside">
+      <div>
+        <img src="./images/service/daowayApp.png">
+      </div>
+      <div>
+        <img src="./images/service/daowayApp.png">
+      </div>
+    </div>
+  </div>
+</section>
+<div class="footer">
+  <div class="footer-top">
+    <div class="promise">
+      <h2>到位<i>服务</i>保证</h2>
+      <p>到位平台担保交易安全，交易未成功100%退款</p>
+      <div class="ser-icon">
+        <span>
+          <img src="./images/main/anquan.jpg">优选服务
+        </span>
+        <span>
+          <img src="./images/main/anquan.jpg">优选服务
+        </span>
+        <span>
+          <img src="./images/main/anquan.jpg">优选服务
+        </span>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div class="bottom-left">
+      热门城市
+    </div>
+    <div class="bottom-right">
+      <a href="javascript:;">北京</a>
+      <a href="javascript:;">上海</a>
+      <a href="javascript:;">广州</a>
+      <a href="javascript:;">深圳</a>
+      <a href="javascript:;">成都</a>
+      <a href="javascript:;">天津</a>
+      <a href="javascript:;">南京</a>
+      <a href="javascript:;">杭州</a>
+      <a href="javascript:;">重庆</a>
+      <a href="javascript:;">苏州</a>
+      <a href="javascript:;">武汉</a>
+      <a href="javascript:;">长沙</a>
+      <a href="javascript:;">济南</a>
+      <a href="javascript:;">郑州</a>
+      <a href="javascript:;">西安</a>
+      <a href="javascript:;">沈阳</a>
+      <a href="javascript:;">福州</a>
+      <a href="javascript:;">厦门</a>
+      <a href="javascript:;">南昌</a>
+      <a href="javascript:;">合肥</a>
+      <a href="javascript:;">宁波</a>
+      <a href="javascript:;">无锡</a>
+      <a href="javascript:;">青岛</a>
+      <a href="javascript:;">大连</a>
+      <a href="javascript:;">东莞</a>
+      <a href="javascript:;">佛山</a>
+      <a href="javascript:;">石家庄</a>
+      <a href="javascript:;">哈尔滨</a>
+      <a href="javascript:;">太原</a>
+      <a href="javascript:;">昆明</a>
+      <a href="javascript:;">贵阳</a>
+      <a href="javascript:;">南宁</a>
+      <a href="javascript:;">温州</a>
+    </div>
+  </div>
+</div>
+<div class="beian">
+  <p class="desc">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
+</div>
+
+<script id="temp3" type="text/html">
+<div class="htit-right">
+  <b>{{data.item.title}}</b>
+  <i>营业时间：<em>09:00-18:00</em></i>
+  <i>最近可预约时间：<em>03月16日 09:00</em></i>
+</div>
+<div class="htit-left">
+  <span>
+    <i>{{data.item.praise}}</i>好评率
+  </span>
+  <span>
+    <i>{{data.item.accept}}</i>接单率
+    <em>|</em>
+  </span>
+  <span>
+    <i>{{data.item.orderCount}}</i>成功接单
+    <em>|</em>
+  </span>
+</div>
+</script>
+
+<scirpt id="temp4" type="text/html">
+  <img src="{{data.item.imgUrl}}" onclick="goDetail()">
+  <div class="link-desc">
+    <span>{{data.item.name}}</span>
+    <span>{{data.item.desc}}</span>
+    <span>
+      <i class="price">{{data.item.price}}<em>元/小时</em></i>
+      <i class="oldpic">原价<em>{{data.item.oldPrice}}</em></em></i>
+      <i class="sold">已售出{{data.item.soldCount}}</i>
+    </span>
+  </div>
+</scirpt>
+
+<script id="temp5" type="text/html">
+  <span class="shopName">
+    {{data.item.company}}
+    <img src="./images/service/renzheng.jpg"/>
+  </span>
+  <span class="desc">{{data.item.profile}}</span>
+</script>
+
+<script id="temp6" type="text/html">
+{{each data.comments}}
+<div class="conment">
+  <img src="{{$value.iconUrl}}">
+  <ul>
+    <li class="username">{{$value.nick}}</li>
+    <li class="star">
+      <span >
+        {{each $value.starClass}}
+        <img src="./images/service/{{$value}}">
+        {{/each}}
+      </span>
+      <span><em>{{$value.formatTime}}</em></span>
+    </li>
+    <li class="say">{{$value.comment}}</li>
+    <li class="position">
+      <img src="./images/service/position.jpg">
+      {{$value.city}}  {{$value.area}}
+    </li>
+  </ul>
+</div>
+{{/each}}
+</script>
+
+<script type="text/javascript" src="./javascripts/jquery-1.10.1.js"></script>
+<script type="text/javascript">
+  var page = 1
+
+  $(function () {
+
+    const $aList = $('.showpage > a')
+    $aList.click(function () {
+      $aList.removeClass('act')
+      $(this).addClass('act')
+      var index = $(this).index()
+          page = ++index
+      console.log(page);
+      $.get('/getComments?page='+page, function (data) {
+        setStar(data)
+        formatDate(data)
+        $('#pl').html(template('temp6', {data:data}))
+      })
+    })
+
+    $.get('/getServiceItem?id=1001', function (data) {
+      $('.htit-center').append(template('temp3', {data:data}))
+      $('#fw').append(template('temp4', {data:data}))
+      $('#sj').append(template('temp5', {data:data}))
+    })
+
+    $.get('/getComments?page='+page, function (data) {
+      setStar(data)
+      formatDate(data)
+      $('#pl').html(template('temp6', {data:data}))
+    })
+
+    $(document).scroll(function () {
+      if($(this).scrollTop()>=71){
+        $('#header').addClass('ani')
+      }else{
+        $('#header').removeClass('ani')
+      }
+    })
+
+  })
+
+  function pageUpOrDown(type) {
+    if(type == 'up'){
+      page--
+      if(page<=1){
+        page = 1
+        return
+      }
+      $.get('/getComments?page='+page, function (data) {
+        setStar(data)
+        formatDate(data)
+        $('#pl').html(template('temp6', {data:data}))
+      })
+    }else if(type == 'down'){
+      page++
+      if(page>9){
+        page = 9
+        return
+      }
+      console.log(page);
+      $.get('/getComments?page='+page, function (data) {
+        setStar(data)
+        formatDate(data)
+        $('#pl').html(template('temp6', {data:data}))
+      })
+    }
+  }
+
+  function getStar(count) {
+    var starArr = []
+    for(var i=0; i<count; i++){
+      starArr.push('red_star.png')
+    }
+    while(starArr.length<5){
+      starArr.push('gray_star.png')
+    }
+    return starArr
+  }
+
+  function setStar(data) {
+    for(var i=0; i<data.comments.length; i++){
+      const count = data.comments[i].star
+      const starArr = getStar(count)
+      data.comments[i].starClass = starArr
+    }
+  }
+
+  function formatDate(data) {
+    for(var i=0; i<data.comments.length; i++){
+      const time = data.comments[i].createtime
+      const formatTime = timestampToTime(time)
+      data.comments[i].formatTime = formatTime
+    }
+  }
+
+  function timestampToTime(timestamp) {
+    var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+    Y = date.getFullYear() + '-';
+    M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+    D = date.getDate() + ' ';
+    return Y+M+D;
+  }
+
+  function goDetail(){
+    window.location.href = 'detail.html'
+  }
+
+</script>
+</body>
+</html>
